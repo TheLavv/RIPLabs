@@ -4,7 +4,7 @@ from lab3.lab_python_fp.print_result import print_result
 from lab3.lab_python_fp.unique import Unique
 from lab3.lab_python_fp.gen_random import gen_random
 
-path = r"D:\home\RIP\lab3\data_light.json"
+path = r"D:\home\RIPLabs\lab3\data_light.json"
 
 with open(path, encoding='utf-8') as f:
     data = json.load(f)

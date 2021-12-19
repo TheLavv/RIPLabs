@@ -17,7 +17,7 @@ class Circle(Figure):
         self.figure_color.colorproperty = color_param
 
     def square(self):
-        return math.pi*(self.r**2)
+        return math.pi * (self.r ** 2)
 
     def __repr__(self):
         figure_color_gent = pymorphy2.MorphAnalyzer().parse(self.figure_color.colorproperty)[0].inflect({'gent'}).word
