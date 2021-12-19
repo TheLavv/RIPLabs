@@ -22,21 +22,23 @@ except:
         except ValueError:
             print('Ошибка! Повторите ввод.')
 
+
 def get_qr_roots(a, b, c):
     result = []
-    D = b*b - 4*a*c
+    D = b * b - 4 * a * c
     if D == 0.0:
-        root = -b / (2.0*a)
+        root = -b / (2.0 * a)
         result.append(root)
     elif D > 0.0:
         sqD = math.sqrt(D)
-        root1 = (-b + sqD) / (2.0*a)
-        root2 = (-b - sqD) / (2.0*a)
+        root1 = (-b + sqD) / (2.0 * a)
+        root2 = (-b - sqD) / (2.0 * a)
         result.append(root1)
         result.append(root2)
     return result
 
-def get_bqr_roots(a = -1, b = -1):
+
+def get_bqr_roots(a=-1, b=-1):
     result = []
     if (a > 0):
         result.append(math.sqrt(a))
@@ -49,6 +51,7 @@ def get_bqr_roots(a = -1, b = -1):
     elif (b == 0):
         result.append(0)
     return result
+
 
 qr_roots = get_qr_roots(coefs['A'], coefs['B'], coefs['C'])
 
