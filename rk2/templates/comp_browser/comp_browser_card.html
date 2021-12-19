@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="card m-3" style="width: 18rem">
+    <img src="{% static 'img/computer.png' %}" class="card-img-top" alt="..." />
+    <div class="card-body">
+        <h5 class="card-title">{{ comp_browser.name }}</h5>
+        <p class="card-text">{{ comp_browser.model }}</p>
+        <a href="{% url 'delete_comp_browser' comp_browser.pk %}" class="btn btn-danger"> Delete </a>
+        <a href="{% url 'update_comp_browser' comp_browser.pk %}" class="btn btn-primary"> Update </a>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark p-3">
+    <a class="navbar-brand ml-5" href="{% url 'main' %}">Andrey Golovatskiy</a>
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a href="{% url 'read_browser' %}" class="nav-link">All Browsers</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'create_browser' %}" class="nav-link">Create Browser</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'read_comp_browser' %}" class="nav-link">All Computers</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'create_comp_browser' %}" class="nav-link">Create Computer</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'report' %}" class="nav-link">Report</a>
+        </li>
+    </ul>
+</nav>

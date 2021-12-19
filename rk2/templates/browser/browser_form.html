@@ -1,0 +1,18 @@
+<div class="mb-3">
+    <label for="browserName" class="form-label">Browser name</label>
+    <input type="text" name="name" value="{{ browser.name }}" class="form-control" id="browserName" />
+</div>
+
+<div class="mb-3">
+    <label for="browserMemoryOnDisk" class="form-label">Browser memory on disk</label>
+    <input type="number" min="0" name="memory_on_disk" value="{{ browser.memory_on_disk }}" required="required" class="form-control" id="browserMemoryOnDisk" />
+</div>
+
+<div class="mb-3">
+    <label for="browsercomp_browser" class="form-label">Select computer browser</label>
+    <select name="comp_browser" class="form-select" aria-label="Default select example" id="browsercomp_browser">
+        {% for comp_browser in comp_browsers %}
+        <option value="{{ comp_browser.pk }}">{{ comp_browser.name }}</option>
+        {% endfor %}
+    </select>
+</div>

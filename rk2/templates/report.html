@@ -1,0 +1,22 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">Report page</h1>
+</div>
+<!-- Page Content -->
+<div>
+    <h1>Computers ordered by name</h1>
+    {% for computer in sorted_computers %} {% include 'comp_browser/comp_browser_card.html' with comp_browser=computer %} {% endfor %}
+</div>
+
+<div style="margin-top: 100px">
+    <h1>Memory on disk occupied by browsers on computers</h1>
+    <div class="d-flex flex-wrap">
+        {% for memory_on_disk in memory_on_disk_arr %}
+        <div class="d-flex flex-column align-center" >
+            <h3 class="text-center">Memory on disk {{ memory_on_disk.memory_on_disk }}</h3>
+            {% include 'comp_browser/comp_browser_card.html' with comp_browser=memory_on_disk.comp_browser %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

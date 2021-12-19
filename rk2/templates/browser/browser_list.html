@@ -1,0 +1,9 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">All browsers</h1>
+</div>
+<!-- Page Content -->
+<div class="d-flex flex-column">
+    {% for browser in browsers %} {% include 'browser/browser_card.html' with browser=browser %} {% endfor %}
+</div>
+{% endblock content %}

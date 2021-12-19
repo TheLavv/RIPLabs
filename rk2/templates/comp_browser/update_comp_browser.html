@@ -1,0 +1,12 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">Update computer browser</h1>
+</div>
+<!-- Page Content -->
+<div>
+    <form action="{% url 'update_comp_browser' comp_browser.pk %}" method="POST" class="form">
+        {% csrf_token %} {% include 'comp_browser/comp_browser_form.html' with comp_browser=comp_browser %}
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock content %}
