@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2>Список компьютеров:</h2>
+    <h3>
+        <ul>
+    {% for computer in data.computers %}
+        <li><a href="{% url 'computer_url' computer.id %}">{{computer.name}}</a></li>
+    {% empty %}
+        <li>Список пуст</li>
+    {% endfor %}
+        </ul>
+    </h3>
+    <h2>Список браузеров:</h2>
+    <h3>
+        <ul>
+    {% for browser in data.browsers %}
+        <li><a href="{% url 'browser_url' browser.id %}">{{browser.name}}</a></li>
+    {% empty %}
+        <li>Список пуст</li>
+    {% endfor %}
+        </ul>
+    </h3>
+{% endblock %}

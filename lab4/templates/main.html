@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}ИУ5-51Б Головацкий Андрей. Лабораторная работа №4.{% endblock %}
+
+{% block content %}
+    <h2 style="color: black">Виды попугаев:</h2>
+<h3>
+    <ul>
+        {% for parrot in data.parrots %}
+            <li>
+                <a href={{parrot.url}}>{{ parrot.name }}</a>
+            </li>
+        {% empty %}
+            <li>Список пуст</li>
+        {% endfor %}
+    </ul>
+</h3>
+{% endblock %}

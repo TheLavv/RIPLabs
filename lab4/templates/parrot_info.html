@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ name }}
+{% endblock %}
+{% block content %}
+{% load static %}
+    <h3>
+        <a href="http://127.0.0.1:8000/">На главную</a>
+    </h3>
+    <h1>
+        {{ name }}
+    </h1>
+    <img style="border-radius: 10%" src="{% static image_src %}" alt="parrot image" />
+    <h3 style="color: darkviolet">
+        {{ info }}
+    </h3>
+{% endblock %}

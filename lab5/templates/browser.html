@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>Название: {{ data.browser.name }}</div>
+     {% for computer in data.computers %}
+         {% if data.browser.computer_id == computer.id %}
+        <div>Компьютер: {{ computer.name }}</div>
+         {% endif %}
+    {% endfor %}
+        <div>Место на диске: {{ data.browser.memory_on_disk }} МБайт</div>
+        <div>Описание: {{ data.browser.description }}</div>
+{% endblock %}
